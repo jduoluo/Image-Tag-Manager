@@ -1,0 +1,98 @@
+# Local image corpus: source material for manual and performance tests.
+# Keep it unchanged; copy selected files into a disposable test-run directory
+# before testing rename or other write operations.
+/test_data/
+
+# Disposable test runs and temporary files
+/temp/
+/tmp/
+
+# Generated application data
+/cache/
+/logs/
+/build/
+/dist/
+/out/
+/coverage/
+
+# Dependencies and language/tool caches
+/.dart_tool/
+/.pub-cache/
+/.flutter-plugins
+/.flutter-plugins-dependencies
+*.iml
+/node_modules/
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.gradle/
+**/build/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+*.key
+*.pem
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.user
+*.suo
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Runtime logs and common temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*~
+
+# Generated Kotlin compiler diagnostics
+/android/.kotlin/
+
+# Android private release signing material
+/private-signing/
+/android/key.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+
+# Local history backup and internal development material
+/.local-backups/
+/AGENTS.md
+/WEB_RULES.md
+/scripts/
+/assets/
+/config/
+/docs/*
+!/docs/ANDROID_USER_GUIDE.md
+!/docs/WINDOWS_USER_GUIDE.md
+!/docs/guide_images/
+/docs/guide_images/*
+!/docs/guide_images/android-filtering-1.png
+!/docs/guide_images/android-filtering-2.png
+!/docs/guide_images/android-other-controls.png
+!/docs/guide_images/android-tag-category.png
+!/docs/guide_images/android-tag-name-group.png
+!/docs/guide_images/android-tagging-1.png
+!/docs/guide_images/android-tagging-2.png
+!/docs/guide_images/android-tagging-3.png
+!/docs/guide_images/android-tagging-4.png
+!/docs/guide_images/windows-filtering-1.png
+!/docs/guide_images/windows-filtering-2.png
+!/docs/guide_images/windows-tag-category.png
+!/docs/guide_images/windows-tag-name-group.png
+!/docs/guide_images/windows-tagging-1.png
+!/docs/guide_images/windows-tagging-2.png
+!/docs/guide_images/windows-tagging-3.png

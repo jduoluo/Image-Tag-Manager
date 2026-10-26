@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(itm_safe_rename LANGUAGES CXX)
+add_library(itm_safe_rename SHARED safe_rename.cpp)
+target_compile_features(itm_safe_rename PRIVATE cxx_std_17)
+target_compile_options(itm_safe_rename PRIVATE -Wall -Wextra -Werror)
