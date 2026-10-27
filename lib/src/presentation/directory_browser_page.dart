@@ -1,3 +1,4 @@
+import 'app_about_page.dart';
 import '../infrastructure/guide_preferences.dart';
 
 import 'dart:async';
@@ -1518,6 +1519,7 @@ final class _DirectoryBrowserPageState extends State<DirectoryBrowserPage> {
       appBar: AppBar(
         title: const Text('图签'),
         actions: [
+          const AppAboutMenuButton(),
           IconButton(
             tooltip: '使用指南',
             icon: const Icon(Icons.error_outline),

@@ -16,11 +16,12 @@
 
 ## 安装与使用
 
-GitHub 仓库名称已确定为 `jduoluo/Image-Tag-Manager`，远端仓库及下载页尚待创建。发布后，Windows 绿色版 ZIP 和 Android APK 将放在项目 Releases 中。
+在项目的 [Releases 页面](https://github.com/jduoluo/Image-Tag-Manager/releases)下载 Windows 绿色版 ZIP 或对应架构的 Android APK。
 
 - Windows：解压完整程序包后运行 `Tuqian.exe`，保留同级 DLL 和 `data/`。更新时退出程序，覆盖程序文件并保留原来的 `config/` 文件夹。
 - Android：安装对应设备架构的 APK。覆盖更新要求应用 ID、签名身份和版本规则兼容；自行签名的构建不能直接覆盖其他签名的安装版本。
 - 双端默认启动时显示指南，也可从顶栏感叹号入口打开。
+- 右上角菜单的“关于图签”提供版本信息、项目主页、问题反馈和离线许可查看入口。
 
 使用说明：[Windows](docs/WINDOWS_USER_GUIDE.md) / [Android](docs/ANDROID_USER_GUIDE.md)。
 
@@ -74,8 +75,6 @@ Copyright (c) 2026 jduoluo。图签自身的代码采用 **GPL-3.0-only**（仅�
 
 本程序不提供任何担保。第三方组件及素材保留各自适用的权利与许可，见 [第三方声明](THIRD_PARTY_NOTICES.md)。
 
-项目地址：`https://github.com/jduoluo/Image-Tag-Manager`
+项目地址：[jduoluo/Image-Tag-Manager](https://github.com/jduoluo/Image-Tag-Manager)
 
-问题反馈：`https://github.com/jduoluo/Image-Tag-Manager/issues`
-
-以上地址按已确定的仓库名称预留，实际可访问性待仓库建立后核验。
+问题反馈：[GitHub Issues](https://github.com/jduoluo/Image-Tag-Manager/issues)

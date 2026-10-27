@@ -1,3 +1,4 @@
+import 'app_about_page.dart';
 import '../infrastructure/guide_preferences.dart';
 import '../infrastructure/media_image_sort.dart';
 
@@ -1987,12 +1988,15 @@ final class _AndroidMediaProbePageState extends State<AndroidMediaProbePage>
             icon: const Icon(Icons.history),
             onPressed: _renaming || _busy ? null : _showMediaHistory,
           ),
+          if (_profiles == null) const AppAboutMenuButton(),
           if (_profiles != null)
             PopupMenuButton<String>(
               tooltip: '配置与标签组',
               enabled: !_renaming && !_busy && !_exporting,
               onSelected: (value) {
-                if (value == 'cleanup') {
+                if (value == 'about') {
+                  openAppAbout(context);
+                } else if (value == 'cleanup') {
                   _openExportCleanup();
                 } else if (value == 'new') {
                   _newProfile();
@@ -2030,6 +2034,8 @@ final class _AndroidMediaProbePageState extends State<AndroidMediaProbePage>
                   child: Text('导入单份 JSON 配置'),
                 ),
                 const PopupMenuItem(value: 'cleanup', child: Text('清理导出副本')),
+                const PopupMenuDivider(),
+                const PopupMenuItem(value: 'about', child: Text('关于图签')),
               ],
             ),
         ],

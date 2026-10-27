@@ -73,7 +73,8 @@ desktop.ini
 /AGENTS.md
 /WEB_RULES.md
 /scripts/
-/assets/
+/assets/*
+!/assets/app_icon.png
 /config/
 /docs/*
 !/docs/ANDROID_USER_GUIDE.md

@@ -321,6 +321,14 @@ void main() {
       await tester.pageBack();
       await tester.pumpAndSettle();
       expect(find.textContaining('已选 1'), findsWidgets);
+      await tester.tap(find.byTooltip('配置与标签组'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('关于图签'));
+      await tester.pumpAndSettle();
+      expect(find.text('Image Tag Manager'), findsOneWidget);
+      await tester.pageBack();
+      await tester.pumpAndSettle();
+      expect(find.textContaining('已选 1'), findsWidgets);
       expect(tester.takeException(), isNull);
     },
   );

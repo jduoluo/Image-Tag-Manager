@@ -173,6 +173,14 @@ void main() {
       await tester.pageBack();
       await tester.pumpAndSettle();
       expect(find.text('选择图片文件夹'), findsOneWidget);
+      await tester.tap(find.byTooltip('更多'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('关于图签'));
+      await tester.pumpAndSettle();
+      expect(find.text('Image Tag Manager'), findsOneWidget);
+      await tester.pageBack();
+      await tester.pumpAndSettle();
+      expect(find.text('选择图片文件夹'), findsOneWidget);
       expect(tester.takeException(), isNull);
     },
   );

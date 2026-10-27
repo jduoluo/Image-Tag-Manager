@@ -68,6 +68,33 @@ class MainActivity : FlutterActivity() {
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "image_tag_manager/app_information")
+            .setMethodCallHandler { call, result ->
+                when (call.method) {
+                    "version" -> {
+                        @Suppress("DEPRECATION")
+                        val info = packageManager.getPackageInfo(packageName, 0)
+                        result.success(info.versionName)
+                    }
+                    "openUrl" -> {
+                        val url = call.arguments as? String
+                        if (url != "https://github.com/jduoluo/Image-Tag-Manager" &&
+                            url != "https://github.com/jduoluo/Image-Tag-Manager/issues") {
+                            result.error("invalid_url", "Only project URLs are supported", null)
+                        } else {
+                            try {
+                                startActivity(Intent(Intent.ACTION_VIEW, android.net.Uri.parse(url)).apply {
+                                    addCategory(Intent.CATEGORY_BROWSABLE)
+                                })
+                                result.success(null)
+                            } catch (error: Exception) {
+                                result.error("open_failed", "Could not open browser", null)
+                            }
+                        }
+                    }
+                    else -> result.notImplemented()
+                }
+            }
         if (!observingMedia) {
             contentResolver.registerContentObserver(android.net.Uri.parse("content://media"), true, mediaObserver)
             observingMedia = true
